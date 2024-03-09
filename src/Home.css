@@ -94,13 +94,15 @@ border-radius: 5px;
 }
 
 button[type="submit"] {
-    display: block;
+    /* display: block; */
+    position: relative;
+    z-index: 9999!important;
     /* margin-top: 80px; */
 }
 @media (max-width: 768px) {
 
     .container{
-        margin-top: 50px;
+        margin-top: 100px;
     }
    .item-data label{
     margin: 0 20px;
@@ -108,9 +110,8 @@ button[type="submit"] {
    .item-data label{
     margin-bottom: 10px;
    }
-   .item-data {
-    /* margin-bottom: 10px; */
-   }
+   
+   
    .unit-val{
     margin-top: 20px;
     margin-left: 49px;
@@ -134,23 +135,33 @@ button[type="submit"] {
         margin-top: -120px;
         position: fixed;
        
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
     }
     .location button{
         padding: 1px;
        width: 100px;
       margin-left: 10px;
-      margin-bottom:  5px;
+      /* margin-bottom:  5px; */
     }
     .submit-button {
+        display: block;
         margin-top: 100px!important;
         margin-left: 150px;
+        z-index: 9999!important;
     }
     .qr{
         margin-top: 60px;
         /* margin-right: 30px; */
         margin-left: 80px;
 
+    }
+    .error-toaster{
+        width: 250px;
+        left: 50%;
+    }
+    .success-toaster{
+        width: 250px;
+        left: 50%;
     }
 }
 
