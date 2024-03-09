@@ -127,7 +127,7 @@ const Home=()=>{
     
 
     return (
-    <>
+    <div className='container'>
         <form action="submit" onSubmit={handleSubmit}>
             <div className='item-data'>
                     <label>Select Item: </label>
@@ -142,7 +142,7 @@ const Home=()=>{
       
          </select>
 
-         <label>Unit: </label> 
+         <label className='unit-lab'>Unit: </label> 
          <input type="text" className='unit-val' value={unit}  readOnly  required />
             </div>
 
@@ -190,7 +190,7 @@ const Home=()=>{
 
       
         
-    </>
+    </div>
   )
 }
 export default Home
