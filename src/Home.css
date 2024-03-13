@@ -155,6 +155,10 @@ button[type="submit"] {
         margin-left: 80px;
 
     }
+    .qr:first-child{
+        height: 50px;
+
+    }
     .error-toaster{
         width: 250px;
         left: 50%;
