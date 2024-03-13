@@ -9,22 +9,6 @@ function QRScanner({ updateLoc }) {
 });
 
 
-
-
-  
-  const toggleCameraFacingMode = () => {
-    const value=constraints.facingMode
-    console.log(constraints.facingMode);
-    if(value==="user"){
-      setConstrains({facingMode: "environment"})
-      
-    }
-    else{
-      setConstrains({facingMode: "user"})
-
-    }
-  };
-
   return (
     <>
       <QrReader

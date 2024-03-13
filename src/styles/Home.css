@@ -1,25 +1,27 @@
-.error-toaster{background-color: red;
-color: white;
-text-align: center;
-padding: 10px;
-position: fixed;
-top: 70px;
-left: 80%;
-transform: translateX(-50%);
-z-index: 9999;
-border-radius: 5px;}
+.error-toaster {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 70px;
+    left: 80%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    border-radius: 5px;
+}
 
-.success-toaster{
-background-color: green;
-color: white;
-text-align: center;
-padding: 10px;
-position: fixed;
-top: 50px;
-left: 80%;
-transform: translateX(-50%);
-z-index: 9999;
-border-radius: 5px;
+.success-toaster {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 50px;
+    left: 80%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    border-radius: 5px;
 }
 
 .item-data {
@@ -55,40 +57,47 @@ border-radius: 5px;
 .quantity input[type="text"] {
     width: 50px;
     margin-bottom: 40px;
-    
+
     /* Adjust width as needed */
 }
 
 .destination-location {
     margin-bottom: 20px;
 }
-.select-item{
+
+.select-item {
     height: 25px;
     padding: 2px 0px;
     margin-right: 10px;
 }
-.unit-val{
+
+.unit-val {
     height: 23px;
     padding-left: 3px;
     width: 25px;
 }
-.location{
+
+.location {
     margin-top: -90px;
     position: absolute;
 }
-.location button{
+
+.location button {
     margin-right: 15px;
     /* position: absolute; */
 }
-.submit-button{
+
+.submit-button {
     margin-top: 70px;
 }
-.qr{
+
+.qr {
     margin-left: 40px;
     margin-top: 20px;
     height: 40%;
 }
-.qr button{
+
+.qr button {
     /* margin-left: 40px; */
     margin-top: -35px;
 }
@@ -96,77 +105,86 @@ border-radius: 5px;
 button[type="submit"] {
     /* display: block; */
     position: relative;
-    z-index: 9999!important;
+    z-index: 9999 !important;
     /* margin-top: 80px; */
 }
+
 @media (max-width: 768px) {
 
-    .container{
+    .container {
         margin-top: 100px;
     }
-   .item-data label{
-    margin: 0 20px;
-   }
-   .item-data label{
-    margin-bottom: 10px;
-   }
-   
-   
-   .unit-val{
-    margin-top: 20px;
-    margin-left: 49px;
-    
-   }
-   .unit-lab{
-    margin-top: 20px!important;
-    
-   }
-    
-    .quantity{
+
+    .item-data label {
+        margin: 0 20px;
+    }
+
+    .item-data label {
+        margin-bottom: 10px;
+    }
+
+
+    .unit-val {
+        margin-top: 20px;
+        margin-left: 49px;
+
+    }
+
+    .unit-lab {
+        margin-top: 20px !important;
+
+    }
+
+    .quantity {
         margin-left: 20px;
         /* margin-top: -20px; */
     }
-    .quantity input{
+
+    .quantity input {
         margin-left: 29px;
         /* margin-top: -20px; */
     }
-    .location{
+
+    .location {
         /* display: flex; */
         margin-top: -120px;
         position: fixed;
-       
+
         /* margin-bottom: 20px; */
     }
-    .location button{
+
+    .location button {
         padding: 1px;
-       width: 100px;
-      margin-left: 10px;
-      /* margin-bottom:  5px; */
+        width: 100px;
+        margin-left: 10px;
+        /* margin-bottom:  5px; */
     }
+
     .submit-button {
         display: block;
-        margin-top: 100px!important;
+        margin-top: 100px !important;
         margin-left: 150px;
-        z-index: 9999!important;
+        z-index: 9999 !important;
     }
-    .qr{
-        margin-top: 60px;
+
+    .qr {
+        margin-top: 90px;
         /* margin-right: 30px; */
         margin-left: 80px;
 
     }
-    .qr:first-child{
-        height: 50px;
 
+    .qr button {
+        margin-top: 50px;
     }
-    .error-toaster{
+
+    .error-toaster {
         width: 250px;
         left: 50%;
     }
-    .success-toaster{
+
+    .success-toaster {
         width: 250px;
         left: 50%;
     }
 }
-
-    

@@ -1,20 +1,14 @@
 import Home from './Home'
-
-  import 'react-toastify/dist/ReactToastify.css';
-
-import './App.css'
+import 'react-toastify/dist/ReactToastify.css';
+import './styles/App.css'
 
 function App() {
 
 
   return (
     <>
- 
-      <h1>Inventory Location System.
-</h1>
+      <h1>Inventory Location System.</h1>
       <Home />
-      
-        
     </>
   )
 }
