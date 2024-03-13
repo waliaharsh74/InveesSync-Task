@@ -3,30 +3,30 @@ import { QrReader } from "react-qr-reader";
 
 function QRScanner({ updateLoc }) {
   const [data, setData] = useState('No result');
-  const [facingMode, setFacingMode] = useState({ exact: "environment" });
+  const [constraints, setConstrains] = useState({
+  facingMode: { exact: "environment" },
+});
 
-  useEffect(() => {
-    // Check if rear camera is available
-    navigator.mediaDevices.enumerateDevices()
-      .then(devices => {
-        const rearCamera = devices.find(device => device.kind === 'videoinput' && device.label.includes('rear'));
-        if (rearCamera) {
-          setFacingMode({ exact: "environment" }); // Set to rear camera
-        }
-      })
-      .catch(error => {
-        console.error('Error enumerating devices:', error);
-      });
-  }, []);
+
+
 
   const toggleCameraFacingMode = () => {
-    setFacingMode(prevMode => prevMode.exact === "environment" ? { exact: "user" } : { exact: "environment" });
+    const value=constraints.facingMode.exact
+    console.log(constraints.facingMode.exact);
+    if(value==="user"){
+      setConstrains({facingMode: { exact: "environment" }})
+      
+    }
+    else{
+      setConstrains({facingMode: { exact: "user" }})
+
+    }
   };
 
   return (
     <>
       <QrReader
-        facingMode={facingMode}
+        constraints={constraints}
         onResult={(result, error) => {
           if (result) {
             setData(result?.text);
