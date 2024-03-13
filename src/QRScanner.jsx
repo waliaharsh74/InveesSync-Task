@@ -3,7 +3,7 @@ import { QrReader } from "react-qr-reader";
 
 function QRScanner({ updateLoc }) {
   const [data, setData] = useState('No result');
-  const [cameraFacingMode, setCameraFacingMode] = useState('environment');
+  const [facingMode, setFacingMode] = useState({ exact: "environment" });
 
   useEffect(() => {
     // Check if rear camera is available
@@ -11,7 +11,7 @@ function QRScanner({ updateLoc }) {
       .then(devices => {
         const rearCamera = devices.find(device => device.kind === 'videoinput' && device.label.includes('rear'));
         if (rearCamera) {
-          setCameraFacingMode('environment'); // Set to rear camera
+          setFacingMode({ exact: "environment" }); // Set to rear camera
         }
       })
       .catch(error => {
@@ -19,10 +19,14 @@ function QRScanner({ updateLoc }) {
       });
   }, []);
 
+  const toggleCameraFacingMode = () => {
+    setFacingMode(prevMode => prevMode.exact === "environment" ? { exact: "user" } : { exact: "environment" });
+  };
+
   return (
     <>
       <QrReader
-        facingMode={cameraFacingMode}
+        facingMode={facingMode}
         onResult={(result, error) => {
           if (result) {
             setData(result?.text);
@@ -32,10 +36,10 @@ function QRScanner({ updateLoc }) {
           }
         }}
       />
+      <button onClick={toggleCameraFacingMode}>Toggle Camera</button>
       {/* <p>{data}</p> */}
     </>
   );
 }
 
 export default QRScanner;
-
